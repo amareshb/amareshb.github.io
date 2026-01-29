@@ -12,7 +12,7 @@ A minimal, elegant personal website for a **backend engineer in data platform**.
 ## Design Philosophy
 
 - **Minimal & Clean:** No flashy animations, no clutter
-- **Dark Mode First:** Dark background with light text (can add light mode toggle later)
+- **Light/Dark Theme:** System preference detection with manual toggle, accessible color schemes for both modes
 - **Text-Focused:** Typography is the hero, not images
 - **Fast:** Static HTML/CSS, minimal JavaScript
 - **Mobile-Responsive:** Works on all devices
@@ -242,9 +242,11 @@ About
 Blog
 Projects
 Uses (optional)
+
+[Theme Toggle]  ← Light/Dark mode switch
 ```
 
-**Mobile:** Hamburger menu or horizontal nav
+**Mobile:** Hamburger menu or horizontal nav (with theme toggle in header/menu)
 
 **Footer:**
 ```
@@ -255,7 +257,9 @@ Uses (optional)
 
 ## Design Tokens
 
-### Colors (Dark Theme)
+### Colors (Light & Dark Themes)
+
+**Dark Theme (Default):**
 ```css
 --bg-primary: #0a0a0a;        /* Main background - near black */
 --bg-secondary: #111111;      /* Card/sidebar background */
@@ -265,6 +269,23 @@ Uses (optional)
 --accent-hover: #60a5fa;      /* Link hover */
 --border: #262626;            /* Borders */
 ```
+
+**Light Theme:**
+```css
+--bg-primary: #ffffff;        /* Main background - white */
+--bg-secondary: #f9fafb;      /* Card/sidebar background - light gray */
+--text-primary: #111827;      /* Main text - near black */
+--text-secondary: #6b7280;    /* Muted text - gray */
+--accent: #2563eb;            /* Links - blue */
+--accent-hover: #1d4ed8;      /* Link hover - darker blue */
+--border: #e5e7eb;            /* Borders - light gray */
+```
+
+**Theme Toggle Implementation:**
+- Use `prefers-color-scheme` media query to detect system preference
+- Store user's manual preference in localStorage
+- Toggle button in header/sidebar
+- Smooth transition between themes (CSS transitions)
 
 ### Typography
 ```css
@@ -346,6 +367,34 @@ xl: 1280px  /* Large desktop */
   <h3><a href="https://github.com/...">Project Name</a></h3>
   <p>Brief description of the project.</p>
 </div>
+```
+
+### 5. Theme Toggle
+```html
+<button id="theme-toggle" aria-label="Toggle theme">
+  <svg class="sun-icon"><!-- Sun icon for light mode --></svg>
+  <svg class="moon-icon"><!-- Moon icon for dark mode --></svg>
+</button>
+
+<script>
+// Detect system preference
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Check localStorage or use system preference
+const theme = localStorage.getItem('theme') ||
+  (prefersDark.matches ? 'dark' : 'light');
+
+// Apply theme
+document.documentElement.setAttribute('data-theme', theme);
+
+// Toggle function
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+</script>
 ```
 
 ---
@@ -441,32 +490,34 @@ Every page should include:
 
 ## Implementation Phases
 
-### Phase 0: Archive Existing Site (REQUIRED FIRST STEP)
-- [ ] Clone existing `username.github.io` repository
-- [ ] Create `archive/v1` branch to preserve old version in git history
-- [ ] Create `_archive/v1/` folder and move all old site files there
-- [ ] Commit the archive
-- [ ] Verify old site is preserved before proceeding
+### Phase 0: Archive Existing Site ✅ COMPLETED
+- [x] Clone existing `username.github.io` repository
+- [x] Create `archive/v1` branch to preserve old version in git history
+- [x] Create `_archive/v1/` folder and move all old site files there
+- [x] Commit the archive
+- [x] Verify old site is preserved before proceeding
 
-### Phase 1: Core (MVP)
-- [ ] Homepage with name, role, tagline, social links
-- [ ] About page
-- [ ] Blog listing page
-- [ ] 1-2 sample blog posts
-- [ ] Basic navigation
-- [ ] Dark theme
-- [ ] Mobile responsive
-- [ ] Deploy to GitHub Pages
+### Phase 1: Core (MVP) ✅ MOSTLY COMPLETED
+- [x] Homepage with name, role, tagline, social links
+- [x] About page with bio, now, and previously sections
+- [x] Blog listing page
+- [x] 2 sample blog posts (currently Lorem Ipsum placeholders)
+- [x] Basic navigation with theme toggle button
+- [x] Light/dark theme with toggle (system preference detection + manual control)
+- [x] Mobile responsive
+- [x] Projects page with 3 GitHub projects
+- [ ] **Deploy to GitHub Pages (push v2 to master)**
 
-### Phase 2: Content
-- [ ] Projects page
-- [ ] Add real blog posts
-- [ ] Add external Substack links
-- [ ] Favicon and OG images
+### Phase 2: Content 🚧 NEXT STEPS
+- [x] Projects page
+- [ ] **Replace Lorem Ipsum with real blog post content**
+- [ ] **Add external Substack links (if applicable)**
+- [ ] **Add favicon.ico to /assets/**
+- [ ] **Add og-image.png to /assets/ for social sharing**
+- [ ] **Add profile.jpg to /assets/ (referenced but missing)**
 
-### Phase 3: Enhancements (Optional)
+### Phase 3: Enhancements (Optional) ⏸️ NOT STARTED
 - [ ] Uses page
-- [ ] Light/dark mode toggle
 - [ ] RSS feed
 - [ ] Search functionality
 - [ ] Analytics (Plausible/Umami)
@@ -588,6 +639,85 @@ Replace these with your actual content:
 - [janvi.me](https://janvi.me) - Timeline style
 - [leerob.io](https://leerob.io) - Next.js blog
 - [jvns.ca](https://jvns.ca) - Content-first blog
+
+---
+
+## Current Status (January 27, 2026)
+
+### ✅ What's Been Completed
+
+**Site Structure:**
+- ✅ Full 4-page website (Home, About, Blog, Projects)
+- ✅ 2 blog post templates (currently Lorem Ipsum content)
+- ✅ Responsive navigation with theme toggle
+- ✅ Mobile-responsive design
+- ✅ All pages use semantic HTML with proper meta tags
+
+**Theme System:**
+- ✅ Complete light/dark theme implementation
+- ✅ CSS custom properties for all colors
+- ✅ JavaScript theme toggle (`js/theme.js`)
+- ✅ System preference detection (`prefers-color-scheme`)
+- ✅ localStorage persistence
+- ✅ Smooth theme transitions
+- ✅ Sun/moon icon toggle button in navigation
+
+**Content:**
+- ✅ Homepage: Name, role, tagline, social links (Email, GitHub, LinkedIn)
+- ✅ About page: Intro, bio, "Now" section, "Previously" (education & work)
+- ✅ Projects page: 3 projects with GitHub links
+- ✅ Blog listing: 2 Lorem Ipsum placeholder posts
+- ✅ Individual blog posts: Full article layout with Lorem Ipsum
+
+**Files Created:**
+```
+amareshb.github.io/
+├── index.html              ✅ Homepage
+├── about.html              ✅ About page
+├── blog.html               ✅ Blog listing
+├── projects.html           ✅ Projects page
+├── blog/
+│   ├── building-scalable-systems.html          ✅ Post 1 (Lorem Ipsum)
+│   └── distributed-systems-debugging.html      ✅ Post 2 (Lorem Ipsum)
+├── css/
+│   └── styles.css          ✅ Theme variables and styles
+├── js/
+│   └── theme.js            ✅ Theme management logic
+└── assets/                 ⚠️  Directory exists but missing files
+```
+
+**Current Branch:** `v2`
+
+---
+
+### 🚧 Next Steps / To-Do
+
+**Immediate (Required for launch):**
+
+1. **Add Missing Assets:**
+   - [ ] Add `profile.jpg` to `/assets/` (referenced in index.html)
+   - [ ] Create/add `favicon.ico` to `/assets/`
+   - [ ] Create/add `og-image.png` to `/assets/` (1200x630px for social sharing)
+
+2. **Replace Placeholder Content:**
+   - [ ] Write real blog post #1 (replace Lorem Ipsum in `building-scalable-systems.html`)
+   - [ ] Write real blog post #2 (replace Lorem Ipsum in `distributed-systems-debugging.html`)
+   - [ ] Update blog post titles and descriptions in `blog.html`
+   - [ ] Update meta descriptions and Open Graph tags
+
+3. **Deploy:**
+   - [ ] Test site locally (`python3 -m http.server 8000`)
+   - [ ] Merge `v2` branch to `master` or push to `master` branch
+   - [ ] Verify GitHub Pages deployment
+   - [ ] Test live site at `https://amareshb.github.io`
+
+**Optional Enhancements (Phase 3):**
+- [ ] Create Uses page (`uses.html`)
+- [ ] Add external blog links (Substack, Medium, etc.)
+- [ ] Implement RSS feed for blog
+- [ ] Add search functionality
+- [ ] Add analytics (Plausible or Umami)
+- [ ] Add comments system (Giscus)
 
 ---
 

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Amaresh Bingumalla</title>
+  <meta name="description" content="Backend engineer with expertise in distributed systems, data platforms, and full-stack development.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Amaresh Bingumalla">
+  <meta property="og:description" content="Backend engineer with expertise in distributed systems, data platforms, and full-stack development.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amareshb.github.io/about.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Theme Script (loaded early to prevent flash) -->
+  <script src="/js/theme.js"></script>
+</head>
+<body style="background-color: var(--bg-primary); color: var(--text-primary);" class="font-sans">
+  <!-- Navigation -->
+  <nav class="container mx-auto max-w-3xl px-6 py-8">
+    <div class="flex justify-between items-center">
+      <div class="flex gap-6 text-sm">
+        <a href="/" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Home</a>
+        <a href="/about.html" style="color: var(--text-primary);" class="font-medium">About</a>
+        <a href="/blog.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Blog</a>
+        <a href="/projects.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Projects</a>
+      </div>
+      <!-- Theme Toggle -->
+      <button
+        onclick="toggleTheme()"
+        class="theme-toggle"
+        aria-label="Toggle theme"
+      >
+        <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mx-auto max-w-3xl px-6 py-12">
+    <h1 class="text-4xl font-bold mb-8 text-[var(--text-primary)]">About</h1>
+
+    <!-- Short Intro -->
+    <div class="mb-12">
+      <p class="text-lg text-[var(--text-secondary)] leading-relaxed">
+        Backend engineer specializing in distributed systems and data platforms. I enjoy building scalable architectures and learning from complex engineering challenges.
+      </p>
+    </div>
+
+    <!-- Bio for Press/Podcasts -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 text-[var(--text-primary)]">Bio</h2>
+      <div class="space-y-4 text-[var(--text-secondary)] leading-relaxed">
+        <p>
+          Amaresh Bingumalla is a backend engineer with expertise in full-stack development, distributed systems, and data platforms. He holds a Master of Science in Computer Software Engineering from Arizona State University, where he focused on web application development and software architecture.
+        </p>
+        <p>
+          With experience spanning backend systems, data engineering, and infrastructure, Amaresh has worked on building scalable solutions at companies like Verizon. His technical interests include problem-solving, algorithms, and modern backend technologies including Java, Python, JavaScript, and various data systems.
+        </p>
+        <p>
+          When not coding, he enjoys exploring new technologies, contributing to open-source projects, and writing about engineering lessons learned.
+        </p>
+      </div>
+    </div>
+
+    <!-- Now Section -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 text-[var(--text-primary)]">Now</h2>
+      <div class="text-[var(--text-secondary)] leading-relaxed space-y-3">
+        <p>Currently focused on:</p>
+        <ul class="list-disc list-inside space-y-2 ml-4">
+          <li>Building and scaling backend systems</li>
+          <li>Exploring distributed architecture patterns</li>
+          <li>Writing technical content about software engineering</li>
+          <li>Contributing to open-source projects</li>
+        </ul>
+        <p class="text-sm italic mt-4">
+          This page is inspired by <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:text-[var(--accent-hover)] underline">nownownow.com</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Previously Section -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 text-[var(--text-primary)]">Previously</h2>
+      <div class="space-y-6">
+        <!-- Verizon -->
+        <div>
+          <h3 class="text-lg font-medium text-[var(--text-primary)] mb-1">Full Stack Developer at Verizon</h3>
+          <p class="text-sm text-[var(--text-secondary)] mb-2">2015 - 2017</p>
+          <p class="text-[var(--text-secondary)] leading-relaxed">
+            Worked on web application development and backend systems, contributing to enterprise-scale projects.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h3 class="text-lg font-medium text-[var(--text-primary)] mb-1">Arizona State University</h3>
+          <p class="text-sm text-[var(--text-secondary)] mb-2">M.S. in Computer Software Engineering (2017 - 2019)</p>
+          <p class="text-[var(--text-secondary)] leading-relaxed">
+            Focused on web application development, software architecture, and full-stack engineering.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium text-[var(--text-primary)] mb-1">SSN College of Engineering</h3>
+          <p class="text-sm text-[var(--text-secondary)] mb-2">B.E. in Computer Science (2011 - 2015)</p>
+          <p class="text-[var(--text-secondary)] leading-relaxed">
+            Foundation in computer science, algorithms, and software development.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="border-t border-[var(--border)] pt-8">
+      <h2 class="text-2xl font-semibold mb-4 text-[var(--text-primary)]">Get in Touch</h2>
+      <p class="text-[var(--text-secondary)] mb-4">
+        Feel free to reach out via email or connect on social media.
+      </p>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <a href="mailto:abingum1@asu.edu" class="text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors">
+          Email
+        </a>
+        <span class="text-[var(--text-secondary)]">·</span>
+        <a href="https://github.com/AmareshB" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors">
+          GitHub
+        </a>
+        <span class="text-[var(--text-secondary)]">·</span>
+        <a href="https://linkedin.com/in/amareshbingumalla" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container mx-auto max-w-3xl px-6 py-12 mt-24 border-t border-[var(--border)]">
+    <p class="text-center text-[var(--text-secondary)] text-sm">
+      &copy; 2026 Amaresh Bingumalla
+    </p>
+  </footer>
+</body>
+</html>

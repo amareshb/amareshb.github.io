@@ -1,0 +1,80 @@
+{
+  "featured": [
+    {
+      "title": "Example Company Blog Post Title",
+      "url": "https://company.com/blog/your-post",
+      "date": "2025-09-10",
+      "dateDisplay": "September 10, 2025",
+      "description": "Example description for a company blog post. Replace with your actual company blog post details.",
+      "type": "company",
+      "external": true
+    },
+    {
+      "title": "Another Company Publication Example",
+      "url": "https://company.com/blog/another-post",
+      "date": "2025-08-05",
+      "dateDisplay": "August 5, 2025",
+      "description": "Another example of a featured company publication. These posts are always displayed at the top of the blog page.",
+      "type": "company",
+      "external": true
+    }
+  ],
+  "posts": [
+    {
+      "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+      "url": "/blog/building-scalable-systems.html",
+      "date": "2026-01-15",
+      "dateDisplay": "January 15, 2026",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "type": "internal",
+      "external": false
+    },
+    {
+      "title": "Sed Ut Perspiciatis Unde Omnis Iste",
+      "url": "/blog/distributed-systems-debugging.html",
+      "date": "2025-12-10",
+      "dateDisplay": "December 10, 2025",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      "type": "internal",
+      "external": false
+    },
+    {
+      "title": "Example External Blog Post Title",
+      "url": "https://medium.com/@yourusername/example-post",
+      "date": "2025-11-20",
+      "dateDisplay": "November 20, 2025",
+      "description": "Example description for an external blog post. Replace with your actual Medium or Substack post details.",
+      "type": "medium",
+      "external": true
+    },
+    {
+      "title": "Another External Blog Post Example",
+      "url": "https://yourname.substack.com/p/example-post",
+      "date": "2025-10-15",
+      "dateDisplay": "October 15, 2025",
+      "description": "Example description for a Substack newsletter post. Replace with your actual content.",
+      "type": "substack",
+      "external": true
+    }
+  ],
+  "projects": [
+    {
+      "title": "Expense Manager",
+      "url": "https://github.com/AmareshB/expensemanager",
+      "description": "A full-featured web application for tracking personal expenses and managing budgets.",
+      "featured": true
+    },
+    {
+      "title": "Chain Reaction Game",
+      "url": "https://github.com/AmareshB/chain-reaction",
+      "description": "An interactive multiplayer strategy game with real-time gameplay and competitive mechanics.",
+      "featured": true
+    },
+    {
+      "title": "Time-Based Sharing in Cloud Environment",
+      "url": "https://github.com/AmareshB/Time-Based-Sharing",
+      "description": "A cloud-based system implementing time-bound resource sharing and access control.",
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sed Ut Perspiciatis Unde Omnis Iste | Amaresh Bingumalla</title>
+  <meta name="description" content="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sed Ut Perspiciatis Unde Omnis Iste">
+  <meta property="og:description" content="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://amareshb.github.io/blog/distributed-systems-debugging.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Theme Script (loaded early to prevent flash) -->
+  <script src="/js/theme.js"></script>
+
+  <style>
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    pre code {
+      display: block;
+      padding: 1em;
+      overflow-x: auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body style="background-color: var(--bg-primary); color: var(--text-primary);" class="font-sans">
+  <!-- Navigation -->
+  <nav class="container mx-auto max-w-3xl px-6 py-8">
+    <div class="flex justify-between items-center">
+      <div class="flex gap-6 text-sm">
+        <a href="/" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Home</a>
+        <a href="/about.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">About</a>
+        <a href="/blog.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Blog</a>
+        <a href="/projects.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Projects</a>
+      </div>
+      <!-- Theme Toggle -->
+      <button
+        onclick="toggleTheme()"
+        class="theme-toggle"
+        aria-label="Toggle theme"
+      >
+        <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mx-auto max-w-3xl px-6 py-12">
+    <!-- Back Link -->
+    <div class="mb-8">
+      <a href="/blog.html" class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm flex items-center gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+
+    <!-- Article Header -->
+    <article>
+      <time class="text-sm text-[var(--text-secondary)]" datetime="2025-12-10">December 10, 2025</time>
+      <h1 class="text-4xl font-bold mt-2 mb-8 text-[var(--text-primary)]">Sed Ut Perspiciatis Unde Omnis Iste</h1>
+
+      <!-- Article Content -->
+      <div class="prose prose-invert max-w-none">
+        <div class="space-y-6 text-[var(--text-secondary)] leading-relaxed">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Excepteur Sint Occaecat</h2>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li>Sed ut perspiciatis unde omnis iste natus</li>
+            <li>Error sit voluptatem accusantium doloremque</li>
+            <li>Laudantium totam rem aperiam eaque ipsa</li>
+            <li>Quae ab illo inventore veritatis et quasi</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Nemo Enim Ipsam</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </p>
+          <pre><code>// Lorem ipsum dolor sit amet
+const consectetur = adipiscing();
+
+// Elit sed do eiusmod
+tempor.incididunt({
+  labore: 'et dolore magna aliqua'
+});
+
+// Ut enim ad minim veniam
+logger.quis('nostrud', { exercitation, ullamco, laboris });</code></pre>
+          <p>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Neque Porro Quisquam Est</h2>
+          <p>
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          </p>
+          <pre><code>// Ut enim ad minima veniam
+quis.nostrum('exercitationem ullam');
+
+// Corporis suscipit laboriosam
+nisi.aliquid({
+  ex: ea.commodi,
+  consequatur: quis.autem,
+  vel: eum.iure,
+  reprehenderit: qui.in
+});</code></pre>
+          <p>
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Temporibus Autem</h2>
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li>Similique sunt in culpa qui officia</li>
+            <li>Deserunt mollitia animi id est laborum</li>
+            <li>Et dolorum fuga et harum quidem</li>
+            <li>Rerum facilis est et expedita distinctio</li>
+          </ul>
+          <p>
+            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Quis Autem Vel Eum</h2>
+          <p>
+            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+          </p>
+          <p>
+            Itaque earum rerum hic tenetur a sapiente delectus:
+          </p>
+          <pre><code>// Et harum quidem rerum
+const facilis = expedita();
+
+// Distinctio nam libero
+{
+  "tempore": "cum soluta",
+  "nobis": "est eligendi",
+  "optio": "cumque nihil",
+  "impedit": 42
+}</code></pre>
+          <p>
+            Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Omnis Voluptas Assumenda</h2>
+          <p>
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Itaque earum rerum:</strong> Hic tenetur a sapiente delectus ut aut reiciendis voluptatibus</li>
+            <li><strong>Maiores alias:</strong> Consequatur aut perferendis doloribus asperiores repellat</li>
+          </ul>
+          <p>
+            Hanc ego cum teneam sententiam, quid est cur verear ne ad eam non possim accommodare nostros quos tu paulo ante cum memoriter.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Sed Quia Consequuntur</h2>
+          <p>
+            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment.
+          </p>
+          <p>
+            So blinded by desire, that they cannot foresee:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li>The pain and trouble that are bound to ensue</li>
+            <li>Equal blame belongs to those who fail in their duty</li>
+            <li>Through weakness of will which is the same</li>
+          </ul>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Et Quasi Architecto</h2>
+          <p>
+            These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled:
+          </p>
+          <ol class="list-decimal list-inside space-y-2 ml-4">
+            <li>When nothing prevents our being able</li>
+            <li>To do what we like best</li>
+            <li>Every pleasure is to be welcomed</li>
+            <li>Every pain avoided but in certain</li>
+            <li>Circumstances and owing to the claims</li>
+            <li>Of duty or the obligations of business</li>
+          </ol>
+          <p>
+            It will frequently occur that pleasures have to be repudiated and annoyances accepted.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-[var(--text-primary)] mt-8 mb-4">Conclusio</h2>
+          <p>
+            The wise man therefore always holds in these matters to this principle of selection:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li>He rejects pleasures to secure other greater pleasures</li>
+            <li>Or else he endures pains to avoid worse pains</li>
+            <li>Thus perfectly simple and easy to distinguish</li>
+            <li>In a free hour when our power of choice</li>
+            <li>Untrammelled and when nothing prevents</li>
+            <li>Our being able to do what we like best</li>
+            <li>Every pleasure is to be welcomed</li>
+          </ul>
+          <p>
+            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container mx-auto max-w-3xl px-6 py-12 mt-24 border-t border-[var(--border)]">
+    <p class="text-center text-[var(--text-secondary)] text-sm">
+      &copy; 2026 Amaresh Bingumalla
+    </p>
+  </footer>
+</body>
+</html>
