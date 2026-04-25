@@ -59,22 +59,16 @@
   ],
   "projects": [
     {
-      "title": "Expense Manager",
-      "url": "https://github.com/amareshb/expensemanager",
-      "description": "A full-featured web application for tracking personal expenses and managing budgets.",
+      "title": "FreeTier.fyi",
+      "url": "https://freetier.fyi/",
+      "description": "An AI-powered comparison platform helping developers discover and compare free tier limits across 50+ infrastructure and AI services.",
       "featured": true
     },
     {
-      "title": "Chain Reaction Game",
-      "url": "https://github.com/amareshb/chain-reaction",
-      "description": "An interactive multiplayer strategy game with real-time gameplay and competitive mechanics.",
+      "title": "More coming soon...",
+      "url": "#",
+      "description": "I'm currently working on several new projects in the data and AI space. Stay tuned!",
       "featured": true
-    },
-    {
-      "title": "Time-Based Sharing in Cloud Environment",
-      "url": "https://github.com/amareshb/Time-Based-Sharing",
-      "description": "A cloud-based system implementing time-bound resource sharing and access control.",
-      "featured": false
     }
   ]
 }

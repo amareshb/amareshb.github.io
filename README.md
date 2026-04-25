@@ -1,138 +1,97 @@
-# amareshb.github.io
+# Portfolio Website
 
-Personal website for Amaresh Bingumalla - Backend Engineer
+A modern, responsive portfolio website built with HTML, Tailwind CSS, and dynamic JSON-based content loading.
 
-## 🚀 Status
+## 🚀 Features
 
-**Current Branch:** `v2` (new design)
-**Live Site:** [amareshb.github.io](https://amareshb.github.io) (currently serving old site)
+- **Dynamic Content** - Projects, blogs, and talks are loaded from a central `data/content.json` file.
+- **Dark Mode Support** - Automatic and manual theme switching.
+- **Responsive Design** - Optimized for mobile, tablet, and desktop.
+- **Conference Talks Section** - Dedicated page and homepage teaser for speaking engagements.
+- **Clean Architecture** - Separated content (JSON), logic (JS), and styling (CSS/Tailwind).
 
-## ✅ What's Complete
-
-- ✅ **Full Site Structure** - 4 main pages (Home, About, Blog, Projects)
-- ✅ **Light/Dark Theme** - Complete theme toggle with system preference detection
-- ✅ **Responsive Design** - Mobile-first, works on all devices
-- ✅ **Blog System** - 2 blog post templates (currently Lorem Ipsum)
-- ✅ **Projects Page** - 3 GitHub projects with links
-- ✅ **About Page** - Bio, "Now" section, education & work history
-
-## 🚧 Next Steps
-
-### Required Before Launch
-
-1. **Add Assets:**
-   - [ ] `assets/profile.jpg` - Profile photo
-   - [ ] `assets/favicon.ico` - Browser icon
-   - [ ] `assets/og-image.png` - Social sharing image (1200x630px)
-
-2. **Content:**
-   - [ ] Replace Lorem Ipsum in blog posts
-   - [ ] Write real blog content
-   - [ ] Update blog titles and descriptions
-
-3. **Deploy:**
-   - [ ] Test locally
-   - [ ] Merge `v2` → `master`
-   - [ ] Verify live deployment
-
-### Optional Enhancements
-
-- [ ] Create Uses page
-- [ ] Add RSS feed
-- [ ] Implement search
-- [ ] Add analytics (Plausible/Umami)
-- [ ] Add external blog links (Substack, etc.)
-
-## 🛠️ Tech Stack
-
-- **HTML5** - Semantic markup
-- **Tailwind CSS** - Via CDN, no build step
-- **Vanilla JavaScript** - Theme toggle + content loading
-- **JSON** - Content management (no HTML editing needed!)
-- **GitHub Pages** - Static hosting
-
-## ✨ Content Management
-
-**All content is managed via JSON!** No need to edit HTML files.
-
-- **Edit `data/content.json`** to add/update blog posts and projects
-- Changes appear immediately on page refresh
-- See `data/README.md` for full documentation
-
-## 📁 Structure
+## 📂 Project Structure
 
 ```
-amareshb.github.io/
-├── index.html              # Homepage
-├── about.html              # About page
-├── blog.html               # Blog listing
-├── projects.html           # Projects showcase
-├── blog/
-│   ├── building-scalable-systems.html
-│   └── distributed-systems-debugging.html
-├── css/
-│   └── styles.css          # Theme variables & styles
+├── index.html          # Homepage
+├── about.html          # About Me page
+├── blog.html           # Blog listing page
+├── talks.html          # Conference talks page
+├── projects.html       # Projects listing page
+├── data/
+│   └── content.json    # Central data store for all content
 ├── js/
-│   └── theme.js            # Theme toggle logic
-├── assets/                 # ⚠️ Missing files (see Next Steps)
-├── _archive/
-│   └── v1/                 # Old site (archived)
-├── spec.md                 # Design specifications
-└── CLAUDE.md               # Development guide
-
+│   ├── content.js      # Dynamic content loader
+│   └── theme.js        # Theme switching logic
+├── css/
+│   └── styles.css      # Custom CSS variables and styles
+├── blog/
+│   └── template.html   # Template for future internal blog posts
+└── assets/             # Images and favicons
 ```
 
-## 🎨 Features
+## 🛠️ Local Development
 
-### Theme System
-- **Light Mode** - White backgrounds, dark text
-- **Dark Mode** - Near-black backgrounds, light text
-- **Auto-detect** - Uses system preference
-- **Persistent** - Saves choice in localStorage
-- **Smooth Transitions** - No flash on page load
-
-### Pages
-- **Home** - Name, role, tagline, social links
-- **About** - Bio, current focus ("Now"), work history, education
-- **Blog** - Post listing with dates and previews
-- **Projects** - GitHub project links with descriptions
-
-## 🧪 Local Development
+To run the website locally and see your changes:
 
 ```bash
-# Start local server
+# Using Python
 python3 -m http.server 8000
 
-# View in browser
-open http://localhost:8000
+# Or using Node.js 'serve'
+npx serve .
 ```
 
-## 📚 Documentation
+Then open `http://localhost:8000` in your browser.
 
-- **spec.md** - Complete design specifications and implementation phases
-- **CLAUDE.md** - Project overview and development guidelines
+## ✍️ How to Add Content
 
-## 🎯 Design Goals
+All content is managed in `data/content.json`. You don't need to edit HTML for content updates!
 
-1. **Minimal & Clean** - No flashy animations, focus on content
-2. **Accessible Themes** - Both light and dark modes with proper contrast
-3. **Typography-Focused** - Text is the hero
-4. **Fast** - Static HTML/CSS, minimal JavaScript
-5. **Mobile-First** - Responsive on all devices
+### 1. Adding a Blog Post (External)
+Add to the `posts` array:
+```json
+{
+  "title": "Post Title",
+  "url": "https://external-link.com",
+  "date": "2025-07-15",
+  "dateDisplay": "July 15, 2025",
+  "description": "Short summary...",
+  "type": "company",
+  "external": true
+}
+```
 
-## 📝 Content Status
+### 2. Adding a Blog Post (Internal)
+1. Copy `blog/template.html` to a new file (e.g., `blog/my-post.html`).
+2. Add to the `posts` array in `content.json`:
+```json
+{
+  "title": "Post Title",
+  "url": "/blog/my-post.html",
+  "date": "2026-01-15",
+  "dateDisplay": "January 15, 2026",
+  "description": "Short summary...",
+  "type": "internal",
+  "external": false
+}
+```
 
-- **Homepage:** ✅ Complete (real content)
-- **About:** ✅ Complete (real content)
-- **Projects:** ✅ Complete (3 real projects)
-- **Blog Posts:** ⚠️ Placeholder (Lorem Ipsum)
+### 3. Adding a Conference Talk
+Add to the `talks` array:
+```json
+{
+  "title": "Talk Title",
+  "conference": "Conf Name 2025",
+  "url": "https://link-to-talk.com",
+  "date": "2025-06-25",
+  "dateDisplay": "June 25, 2025",
+  "description": "Talk abstract..."
+}
+```
 
-## 🔗 Links
+### 4. Adding a Project
+Add to the `projects` array. Set `"featured": true` to show it on the homepage.
 
-- GitHub: [@amareshb](https://github.com/amareshb)
-- LinkedIn: [amareshbingumalla](https://linkedin.com/in/amareshbingumalla)
-- Email: amareshbingumalla@gmail.com
-
----
-
-*Last updated: January 27, 2026*
+## 📄 License
+MIT
