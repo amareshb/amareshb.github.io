@@ -1,78 +1,78 @@
 {
   "featured": [
     {
-      "title": "Example Company Blog Post Title",
-      "url": "https://company.com/blog/your-post",
-      "date": "2025-09-10",
-      "dateDisplay": "September 10, 2025",
-      "description": "Example description for a company blog post. Replace with your actual company blog post details.",
+      "title": "Modernizing Data Infrastructure at Peloton Using Apache Hudi",
+      "url": "https://hudi.apache.org/blog/2025/07/15/modernizing-datainfra-peloton-hudi/",
+      "date": "2025-07-15",
+      "dateDisplay": "July 15, 2025",
+      "description": "Peloton re-architected its data platform using Apache Hudi to transition to 10-minute ingestion cycles using CDC. This migration reduced operational costs, improved data freshness, and simplified GDPR compliance.",
       "type": "company",
       "external": true
     },
     {
-      "title": "Another Company Publication Example",
-      "url": "https://company.com/blog/another-post",
-      "date": "2025-08-05",
-      "dateDisplay": "August 5, 2025",
-      "description": "Another example of a featured company publication. These posts are always displayed at the top of the blog page.",
+      "title": "Fusing Elasticsearch with Neural Networks to Identify Data",
+      "url": "https://blog.x.com/engineering/en_us/topics/insights/2021/fusing-elasticsearch-with-neural-networks-to-identify-data",
+      "date": "2021-09-08",
+      "dateDisplay": "September 8, 2021",
+      "description": "Integrated Elasticsearch with deep learning models to improve data identification and search relevance. Developed a hybrid system combining keyword search with neural network embeddings for semantic understanding at scale.",
       "type": "company",
       "external": true
     }
   ],
   "posts": [
     {
-      "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
-      "url": "/blog/building-scalable-systems.html",
-      "date": "2026-01-15",
-      "dateDisplay": "January 15, 2026",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "type": "internal",
-      "external": false
-    },
-    {
-      "title": "Sed Ut Perspiciatis Unde Omnis Iste",
-      "url": "/blog/distributed-systems-debugging.html",
-      "date": "2025-12-10",
-      "dateDisplay": "December 10, 2025",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
-      "type": "internal",
-      "external": false
-    },
-    {
-      "title": "Example External Blog Post Title",
-      "url": "https://medium.com/@yourusername/example-post",
-      "date": "2025-11-20",
-      "dateDisplay": "November 20, 2025",
-      "description": "Example description for an external blog post. Replace with your actual Medium or Substack post details.",
-      "type": "medium",
+      "title": "Modernizing Data Infrastructure at Peloton Using Apache Hudi",
+      "url": "https://hudi.apache.org/blog/2025/07/15/modernizing-datainfra-peloton-hudi/",
+      "date": "2025-07-15",
+      "dateDisplay": "July 15, 2025",
+      "description": "Peloton re-architected its data platform using Apache Hudi to transition to 10-minute ingestion cycles using CDC. This migration reduced operational costs, improved data freshness, and simplified GDPR compliance.",
+      "type": "company",
       "external": true
     },
     {
-      "title": "Another External Blog Post Example",
-      "url": "https://yourname.substack.com/p/example-post",
-      "date": "2025-10-15",
-      "dateDisplay": "October 15, 2025",
-      "description": "Example description for a Substack newsletter post. Replace with your actual content.",
-      "type": "substack",
+      "title": "Fusing Elasticsearch with Neural Networks to Identify Data",
+      "url": "https://blog.x.com/engineering/en_us/topics/insights/2021/fusing-elasticsearch-with-neural-networks-to-identify-data",
+      "date": "2021-09-08",
+      "dateDisplay": "September 8, 2021",
+      "description": "Integrated Elasticsearch with deep learning models to improve data identification and search relevance. Developed a hybrid system combining keyword search with neural network embeddings for semantic understanding at scale.",
+      "type": "company",
       "external": true
+    }
+  ],
+  "talks": [
+    {
+      "title": "How Our Team Used Open Table Formats to Boost Querying and Reduce Latency",
+      "conference": "OpenXData 2025",
+      "url": "https://www.youtube.com/watch?v=tjIk_S1q2Hk&t=4s",
+      "date": "2025-07-01",
+      "dateDisplay": "July 2025",
+      "description": "Discussed how Peloton utilized Apache Hudi to enhance data querying on Amazon S3. Built near real-time data pipelines using Hudi, Spark, and Kafka to reduce ETL costs and improve data freshness for ML workflows."
+    },
+    {
+      "title": "Building a data platform with open source: A $1M+ cost-saving journey",
+      "conference": "PlatformCon 2025",
+      "url": "https://2025.platformcon.com/speakers/amaresh-bingumalla",
+      "date": "2025-06-25",
+      "dateDisplay": "June 25, 2025",
+      "description": "Explored how open-source tools can create a self-service data platform. Shared a case study of transitioning from SaaS solutions to custom platforms, saving over $1M annually."
     }
   ],
   "projects": [
     {
       "title": "Expense Manager",
-      "url": "https://github.com/AmareshB/expensemanager",
+      "url": "https://github.com/amareshb/expensemanager",
       "description": "A full-featured web application for tracking personal expenses and managing budgets.",
       "featured": true
     },
     {
       "title": "Chain Reaction Game",
-      "url": "https://github.com/AmareshB/chain-reaction",
+      "url": "https://github.com/amareshb/chain-reaction",
       "description": "An interactive multiplayer strategy game with real-time gameplay and competitive mechanics.",
       "featured": true
     },
     {
       "title": "Time-Based Sharing in Cloud Environment",
-      "url": "https://github.com/AmareshB/Time-Based-Sharing",
+      "url": "https://github.com/amareshb/Time-Based-Sharing",
       "description": "A cloud-based system implementing time-bound resource sharing and access control.",
       "featured": false
     }

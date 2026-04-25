@@ -129,9 +129,9 @@ open http://localhost:8000
 
 ## 🔗 Links
 
-- GitHub: [@AmareshB](https://github.com/AmareshB)
+- GitHub: [@amareshb](https://github.com/amareshb)
 - LinkedIn: [amareshbingumalla](https://linkedin.com/in/amareshbingumalla)
-- Email: abingum1@asu.edu
+- Email: amareshbingumalla@gmail.com
 
 ---
 

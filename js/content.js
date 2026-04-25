@@ -61,6 +61,32 @@
     `;
   }
 
+  // Render a single conference talk
+  function renderTalk(talk) {
+    return `
+      <article class="border-b border-[var(--border)] pb-8">
+        <div class="flex items-center gap-2 mb-1">
+          <time class="text-sm text-[var(--text-secondary)]" datetime="${talk.date}">${talk.dateDisplay}</time>
+          <span style="color: var(--accent);" class="text-xs">• ${talk.conference}</span>
+        </div>
+        <h3 class="text-2xl font-semibold mt-2 mb-3">
+          <a
+            href="${talk.url}"
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors flex items-center gap-2"
+          >
+            ${talk.title}
+            ${externalLinkIcon()}
+          </a>
+        </h3>
+        <p class="text-[var(--text-secondary)] leading-relaxed mb-3">
+          ${talk.description}
+        </p>
+      </article>
+    `;
+  }
+
   // Render a project card (homepage style - card format)
   function renderProjectCard(project) {
     return `
@@ -146,6 +172,18 @@
     const allPosts = document.getElementById('all-posts');
     if (allPosts && content.posts) {
       allPosts.innerHTML = content.posts.map(post => renderPost(post)).join('');
+    }
+
+    // Render conference talks
+    const talksContainer = document.getElementById('talks-container');
+    if (talksContainer && content.talks) {
+      talksContainer.innerHTML = content.talks.map(talk => renderTalk(talk)).join('');
+    }
+
+    // Render recent talks (homepage - first 2)
+    const recentTalksHome = document.getElementById('recent-talks-home');
+    if (recentTalksHome && content.talks) {
+      recentTalksHome.innerHTML = content.talks.slice(0, 2).map(talk => renderTalk(talk)).join('');
     }
 
     // Render featured projects (homepage - first 2, card format)
