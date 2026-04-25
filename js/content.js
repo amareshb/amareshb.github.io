@@ -112,7 +112,7 @@
           style="color: var(--accent);"
           class="hover:text-[var(--accent-hover)] text-sm flex items-center gap-1"
         >
-          View on GitHub
+          Visit Website
           ${externalLinkIcon()}
         </a>
       </div>
@@ -143,7 +143,7 @@
             rel="noopener noreferrer"
             class="text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors flex items-center gap-1"
           >
-            View on GitHub
+            Visit Website
             ${externalLinkIcon()}
           </a>
         </div>
@@ -160,12 +160,6 @@
     const featuredContainer = document.getElementById('featured-posts');
     if (featuredContainer && content.featured) {
       featuredContainer.innerHTML = content.featured.map(post => renderPost(post, true)).join('');
-    }
-
-    // Render recent posts (homepage - first 2)
-    const recentPostsHome = document.getElementById('recent-posts-home');
-    if (recentPostsHome && content.posts) {
-      recentPostsHome.innerHTML = content.posts.slice(0, 2).map(post => renderPost(post)).join('');
     }
 
     // Render all posts (blog page)
