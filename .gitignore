@@ -1,0 +1,14 @@
+# Claude Code configuration
+CLAUDE.md
+
+# macOS
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.swo
+*~
