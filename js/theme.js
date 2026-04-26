@@ -1,22 +1,28 @@
 // Theme management
 (function() {
-  // Check for saved theme preference or default to system preference
+  const THEME_OVERRIDE_KEY = 'theme-override';
+  const LEGACY_THEME_KEY = 'theme';
+
+  const prefersDarkQuery = window.matchMedia
+    ? window.matchMedia('(prefers-color-scheme: dark)')
+    : null;
+
+  const getSystemTheme = () => {
+    return prefersDarkQuery && prefersDarkQuery.matches ? 'dark' : 'light';
+  };
+
   const getInitialTheme = () => {
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme =
+      localStorage.getItem(THEME_OVERRIDE_KEY) ||
+      localStorage.getItem(LEGACY_THEME_KEY);
 
     if (savedTheme) {
       return savedTheme;
     }
 
-    // Check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-
-    return 'light';
+    return getSystemTheme();
   };
 
-  // Apply theme to document
   const applyTheme = (theme) => {
     if (theme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -25,24 +31,20 @@
     }
   };
 
-  // Initialize theme on page load
   const theme = getInitialTheme();
   applyTheme(theme);
 
-  // Toggle theme function
   window.toggleTheme = () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
     applyTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
+    localStorage.setItem(THEME_OVERRIDE_KEY, newTheme);
   };
 
-  // Listen for system theme changes
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      // Only auto-switch if user hasn't manually set a preference
-      if (!localStorage.getItem('theme')) {
+  if (prefersDarkQuery) {
+    prefersDarkQuery.addEventListener('change', (e) => {
+      if (!localStorage.getItem(THEME_OVERRIDE_KEY)) {
         applyTheme(e.matches ? 'dark' : 'light');
       }
     });
