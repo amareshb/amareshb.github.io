@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amaresh Bingumalla</title>
-  <meta name="description" content="Backend Engineer specializing in distributed systems and data platforms.">
+  <meta name="description" content="Data platform, data infrastructure, and AI infrastructure engineer.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Amaresh Bingumalla">
-  <meta property="og:description" content="Backend Engineer specializing in distributed systems and data platforms.">
+  <meta property="og:description" content="Data platform, data infrastructure, and AI infrastructure engineer.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://amareshb.github.io/">
   <meta property="og:image" content="/assets/og-image.png">
@@ -33,17 +33,15 @@
   <script src="/js/content.js"></script>
 </head>
 <body style="background-color: var(--bg-primary); color: var(--text-primary);" class="font-sans">
-  <!-- Navigation -->
-  <nav class="container mx-auto max-w-3xl px-6 py-8">
+  <nav class="container mx-auto max-w-5xl px-6 py-8">
     <div class="flex justify-between items-center">
       <div class="flex gap-6 text-sm">
         <a href="/" style="color: var(--text-primary);" class="font-medium">Home</a>
         <a href="/about.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">About</a>
-        <a href="/blog.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Blog</a>
+        <a href="/blog.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Writing</a>
         <a href="/talks.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Talks</a>
         <a href="/projects.html" style="color: var(--text-secondary);" class="hover:text-[var(--text-primary)] transition-colors">Projects</a>
       </div>
-      <!-- Theme Toggle -->
       <button
         onclick="toggleTheme()"
         class="theme-toggle"
@@ -59,105 +57,89 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="flex items-center justify-center px-6 py-20 md:py-32">
-    <div class="max-w-2xl mx-auto text-center">
-      <!-- Profile Photo -->
-      <div class="mb-8 flex justify-center">
-        <img
-          src="/assets/profile.jpg"
-          alt="Amaresh Bingumalla"
-          style="border-color: var(--border);"
-          class="w-32 h-32 rounded-full object-cover border-2"
-        />
-      </div>
+  <section class="px-6 py-16 md:py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid gap-12 md:grid-cols-[auto,1fr] md:items-center">
+        <div class="flex justify-center md:justify-start">
+          <img
+            src="/assets/profile.jpg"
+            alt="Amaresh Bingumalla"
+            style="border-color: var(--border);"
+            class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2"
+          />
+        </div>
 
-      <!-- Intro Text -->
-      <div class="mb-8">
-        <h1 style="color: var(--text-primary);" class="text-5xl md:text-6xl font-bold mb-4">Amaresh Bingumalla</h1>
-        <p style="color: var(--text-secondary);" class="text-2xl mb-4">Backend Engineer</p>
-        <p style="color: var(--text-secondary);" class="text-lg leading-relaxed max-w-xl mx-auto">
-          Building distributed data systems, ML and data platforms. Frequent speaker at industry conferences (PlatformCon, OpenXData) and author of engineering blogs on data platforms.
-        </p>
-      </div>
+        <div>
+          <p style="color: var(--accent);" class="text-sm uppercase tracking-[0.2em] font-semibold mb-4">Data Platform and AI Infrastructure</p>
+          <h1 style="color: var(--text-primary);" class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            Amaresh Bingumalla
+          </h1>
+          <p style="color: var(--text-secondary);" class="text-lg leading-relaxed max-w-3xl mb-6">
+            I work on data platforms, infrastructure, and AI data enablement systems, with a focus on distributed systems, scale, and the foundations that make analytics and ML workflows easier to use.
+          </p>
+          <p style="color: var(--text-secondary);" class="text-base leading-relaxed max-w-3xl mb-8">
+            I write and speak occasionally about data platforms, infrastructure, and engineering.
+          </p>
 
-      <!-- Social Links -->
-      <div class="flex flex-wrap gap-4 justify-center text-sm">
-        <a
-          href="mailto:amareshbingumalla@gmail.com"
-          style="color: var(--accent);"
-          class="hover:text-[var(--accent-hover)] transition-colors flex items-center gap-2"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-          </svg>
-          Email
-        </a>
-        <a
-          href="https://github.com/amareshb"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="color: var(--accent);"
-          class="hover:text-[var(--accent-hover)] transition-colors flex items-center gap-2"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-          </svg>
-          GitHub
-        </a>
-        <a
-          href="https://linkedin.com/in/amareshbingumalla"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="color: var(--accent);"
-          class="hover:text-[var(--accent-hover)] transition-colors flex items-center gap-2"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
-          </svg>
-          LinkedIn
-        </a>
+          <div class="flex flex-wrap gap-3 text-sm">
+            <a
+              href="/projects.html"
+              style="background-color: var(--text-primary); color: var(--bg-primary);"
+              class="inline-flex items-center rounded-full px-5 py-3 hover:opacity-90 transition-opacity"
+            >
+              Projects
+            </a>
+            <a
+              href="/talks.html"
+              style="background-color: var(--bg-secondary); color: var(--text-primary); border-color: var(--border);"
+              class="inline-flex items-center rounded-full border px-5 py-3 hover:opacity-90 transition-opacity"
+            >
+              Speaking
+            </a>
+            <a
+              href="mailto:amareshbingumalla@gmail.com"
+              style="background-color: var(--bg-secondary); color: var(--text-primary); border-color: var(--border);"
+              class="inline-flex items-center rounded-full border px-5 py-3 hover:opacity-90 transition-opacity"
+            >
+              Contact
+            </a>
+            <a
+              href="https://github.com/amareshb"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color: var(--accent);"
+              class="inline-flex items-center px-2 py-3 hover:text-[var(--accent-hover)] transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/amareshbingumalla"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color: var(--accent);"
+              class="inline-flex items-center px-2 py-3 hover:text-[var(--accent-hover)] transition-colors"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Publication Section -->
-  <section class="container mx-auto max-w-4xl px-6 py-16">
-    <h2 style="color: var(--text-primary);" class="text-3xl font-bold mb-8">Featured</h2>
-    <div id="featured-posts" class="space-y-8">
+  <section class="container mx-auto max-w-5xl px-6 py-16">
+    <div class="max-w-3xl mb-10">
+      <h2 style="color: var(--text-primary);" class="text-3xl font-bold">Highlights</h2>
+      <p style="color: var(--text-secondary);" class="mt-3 text-base leading-relaxed">
+        A few places to start.
+      </p>
+    </div>
+    <div id="home-highlights" class="grid gap-6 lg:grid-cols-3">
       <!-- Content loaded from JSON -->
     </div>
   </section>
 
-  <!-- Recent Talks Section -->
-  <section class="container mx-auto max-w-4xl px-6 py-16">
-    <div class="flex justify-between items-center mb-8">
-      <h2 style="color: var(--text-primary);" class="text-3xl font-bold">Recent Talks</h2>
-      <a href="/talks.html" style="color: var(--accent);" class="hover:text-[var(--accent-hover)] transition-colors text-sm">
-        View all →
-      </a>
-    </div>
-    <div id="recent-talks-home" class="space-y-8">
-      <!-- Content loaded from JSON -->
-    </div>
-  </section>
-
-  <!-- Featured Projects Section -->
-  <section class="container mx-auto max-w-4xl px-6 py-16">
-    <div class="flex justify-between items-center mb-8">
-      <h2 style="color: var(--text-primary);" class="text-3xl font-bold">Featured Projects</h2>
-      <a href="/projects.html" style="color: var(--accent);" class="hover:text-[var(--accent-hover)] transition-colors text-sm">
-        View all →
-      </a>
-    </div>
-
-    <div id="featured-projects" class="grid md:grid-cols-2 gap-6">
-      <!-- Content loaded from JSON -->
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer style="border-color: var(--border);" class="container mx-auto max-w-4xl px-6 py-12 mt-12 border-t">
+  <footer style="border-color: var(--border);" class="container mx-auto max-w-5xl px-6 py-12 mt-12 border-t">
     <p style="color: var(--text-secondary);" class="text-center text-sm">
       &copy; 2026 Amaresh Bingumalla
     </p>
