@@ -23,6 +23,16 @@
   ],
   "posts": [
     {
+      "title": "AI Isn’t Just a Faster Coder for Me, It’s My Cross-Functional Team",
+      "url": "https://amareshb.substack.com/p/ai-isnt-just-a-faster-coder-for-me?r=hkqts",
+      "date": "2026-04-28",
+      "dateDisplay": "April 28, 2026",
+      "description": "As a solo developer, I used image generation, GPT-5.5, and Codex-mini in different roles to think through, design, and build a game UI I don’t think I would have arrived at on my own.",
+      "publication": "Substack",
+      "type": "substack",
+      "external": true
+    },
+    {
       "title": "Modernizing Data Infrastructure at Peloton Using Apache Hudi",
       "url": "https://hudi.apache.org/blog/2025/07/15/modernizing-datainfra-peloton-hudi/",
       "date": "2025-07-15",
