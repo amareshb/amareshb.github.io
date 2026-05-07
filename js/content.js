@@ -42,7 +42,7 @@
           <time class="text-sm text-[var(--text-secondary)]" datetime="${post.date}">${post.dateDisplay}</time>
           ${platformLabel}
         </div>
-        <h3 class="text-2xl font-semibold mt-2 mb-3">
+        <h3 class="text-xl font-semibold mt-2 mb-3">
           <a
             href="${post.url}"
             ${externalAttrs}
@@ -67,7 +67,7 @@
           <time class="text-sm text-[var(--text-secondary)]" datetime="${talk.date}">${talk.dateDisplay}</time>
           <span style="color: var(--accent);" class="text-xs">• ${talk.conference}</span>
         </div>
-        <h3 class="text-2xl font-semibold mt-2 mb-3">
+        <h3 class="text-xl font-semibold mt-2 mb-3">
           <a
             href="${talk.url}"
             target="_blank"
@@ -175,11 +175,11 @@
     return `
       <article style="background-color: var(--bg-secondary); border-color: var(--border);" class="rounded-2xl border p-6">
         <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)] mb-3">${eyebrow}</p>
-        <h3 class="text-2xl font-semibold text-[var(--text-primary)] mb-3">${title}</h3>
+        <h3 class="text-xl font-semibold text-[var(--text-primary)] mb-3">${title}</h3>
         <p class="text-sm leading-relaxed text-[var(--text-secondary)] mb-5">${description}</p>
         <div class="border-t border-[var(--border)] pt-5">
           <p class="text-xs text-[var(--text-secondary)] mb-2">${itemMeta}</p>
-          <div class="text-base font-medium mb-5">${linkedTitle}</div>
+          <div class="text-sm font-medium leading-relaxed mb-5">${linkedTitle}</div>
           <a href="${ctaUrl}" class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm transition-colors">
             ${ctaLabel} →
           </a>

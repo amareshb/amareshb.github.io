@@ -21,12 +21,20 @@
   --border: #262626;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 /* Smooth transitions for theme changes */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Theme Toggle Button Styles */
+nav a {
+  font-weight: 500;
+}
+
 .theme-toggle {
   position: relative;
   width: 40px;
