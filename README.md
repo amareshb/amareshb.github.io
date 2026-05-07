@@ -47,6 +47,8 @@ Then open `http://localhost:8000` in your browser.
 ## ✍️ How to Add Content
 
 All content is managed in `data/content.json`. You don't need to edit HTML for content updates!
+The site fetches this JSON with `cache: 'no-store'`, so content-only deploys should show up without needing users to hard-refresh cached JavaScript or CSS.
+HTML pages also include cache-control meta tags to encourage browser revalidation. GitHub Pages default branch publishing does not support custom HTTP cache headers from this repo; use GitHub Actions or a CDN if stricter production cache rules are needed.
 
 ### 1. Adding a Blog Post (External)
 Add to the `posts` array:

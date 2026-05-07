@@ -2,7 +2,9 @@
 (function() {
   async function loadContent() {
     try {
-      const response = await fetch('/data/content.json');
+      const response = await fetch('/data/content.json', {
+        cache: 'no-store'
+      });
       const data = await response.json();
       return data;
     } catch (error) {
