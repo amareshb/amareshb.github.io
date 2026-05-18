@@ -1,6 +1,16 @@
 {
   "featured": [
     {
+      "title": "I Built a $0/Month Always-On Machine for My Hermes Agent",
+      "url": "https://amareshb.substack.com/p/i-built-a-0month-always-on-machine",
+      "date": "2026-05-18",
+      "dateDisplay": "May 18, 2026",
+      "description": "I wanted my Hermes agent to stop depending on my laptop, so I put it on Oracle Cloud's Always Free tier, connected it to Telegram, locked SSH behind Tailscale, and kept the whole loop at $0 per month.",
+      "publication": "Substack",
+      "type": "substack",
+      "external": true
+    },
+    {
       "title": "Modernizing Data Infrastructure at Peloton Using Apache Hudi",
       "url": "https://hudi.apache.org/blog/2025/07/15/modernizing-datainfra-peloton-hudi/",
       "date": "2025-07-15",
@@ -22,6 +32,16 @@
     }
   ],
   "posts": [
+    {
+      "title": "I Built a $0/Month Always-On Machine for My Hermes Agent",
+      "url": "https://amareshb.substack.com/p/i-built-a-0month-always-on-machine",
+      "date": "2026-05-18",
+      "dateDisplay": "May 18, 2026",
+      "description": "I wanted my Hermes agent to stop depending on my laptop, so I put it on Oracle Cloud's Always Free tier, connected it to Telegram, locked SSH behind Tailscale, and kept the whole loop at $0 per month.",
+      "publication": "Substack",
+      "type": "substack",
+      "external": true
+    },
     {
       "title": "AI Isn’t Just a Faster Coder for Me, It’s My Cross-Functional Team",
       "url": "https://amareshb.substack.com/p/ai-isnt-just-a-faster-coder-for-me?r=hkqts",
