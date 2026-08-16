@@ -94,7 +94,7 @@
   "projects": [
     {
       "title": "FreeTier.fyi",
-      "url": "https://freetier.fyi/",
+      "url": "https://freetier-fyi.vercel.app/",
       "description": "An AI-powered comparison platform for discovering and comparing free-tier limits across infrastructure and AI services.",
       "label": "Public Project",
       "context": "Independent",
